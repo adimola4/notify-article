@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   require "sidekiq/web"
   mount Sidekiq::Web => "/sidekiq"
 
-  mount ActionCable.server => "/cable"
+  mount ActionCable.server => "/server/cable"
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
