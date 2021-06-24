@@ -10,9 +10,7 @@ import { Source } from '../models/source';
   providedIn: 'root',
 })
 export class DataService {
-  API_URL = environment.production
-    ? 'https://notify-articles.herokuapp.com:3001'
-    : 'http://localhost:3001/api/v1/';
+  API_URL =  'http://localhost:3001/api/v1/';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
