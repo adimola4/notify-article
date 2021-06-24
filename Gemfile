@@ -26,6 +26,8 @@ gem "nokogiri", ">= 1.5.0"
 gem "sidekiq", "5.2.7"
 gem "sidekiq-cron", "~> 1.1"
 gem "httparty"
+gem 'redis'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
