@@ -11,7 +11,7 @@
         <span class="mdi mdi-settings"></span>
         <span class="label">Notifications</span>
       </div>
-      <div class="notification-body">
+      <div class="notification-body scrollbar-hidden">
         <!-- <app-notification-list [articles]="articles"> </app-notification-list> -->
         <ul
           *ngIf="articles.length"
@@ -30,7 +30,7 @@
               'bg-dark': article.unread === true,
               'bg-light': article.unread === false
             }"
-            class="article"
+            class="article scrollbar-hidden"
           >
             <a
               href="{{ article.original_url }}"

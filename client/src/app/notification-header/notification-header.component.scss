@@ -48,12 +48,21 @@
 }
 .article {
   padding: 2px;
+  padding-right: 9px;
   display: flex;
   flex: 1 1 100%;
   flex-wrap: wrap;
   position: relative;
   border-bottom: 1px solid #264097;
   min-height: 45px;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 .bg-dark {
   background-color: rgb(119, 117, 117);
