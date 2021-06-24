@@ -18,9 +18,8 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'Notify-Articles';
   @ViewChild(NotificationHeaderComponent)
   private notificationComponent!: NotificationHeaderComponent;
-  WS_URL = environment.production 
-    ? 'ws://notify-articles.herokuapp.com/cable'
-    : 'ws://localhost:3001/cable';
+  WS_URL =  'ws://notify-articles.herokuapp.com/cable'
+            
 
   private cable: any;
   private subscription: any;
