@@ -1,0 +1,134 @@
+.notification-header {
+  background-color: rgb(76, 88, 126);
+  width: 100%;
+  height: 68px;
+  padding: 0;
+  margin: 0;
+}
+.notification-wrapper {
+  position: relative;
+  margin-right: 15px;
+  padding: 22px 13px;
+  float: right;
+  border-radius: 5px;
+}
+.notification-wrapper .notification-btn {
+  color: #ffffff;
+  cursor: pointer;
+}
+.notification-wrapper .notification-content {
+  position: absolute;
+  top: 46px;
+  right: 10px;
+  width: 350px;
+  height: 425px !important;
+  background-color: whitesmoke;
+  z-index: 300;
+  border-radius: 6%;
+}
+.notification-wrapper .notification-title {
+  padding: 10px;
+  color: #ffffff;
+  background-image: linear-gradient(
+    -225deg,
+    rgb(117, 93, 213) 35%,
+    rgb(76 88 126) 100%
+  );
+}
+.notification-wrapper .notification-title .label {
+  display: inline-block;
+  width: 90%;
+  text-align: center;
+  font-weight: 500;
+}
+.notification-wrapper .notification-content .notification-body {
+  overflow: scroll;
+  height: 90%;
+  margin: 0;
+}
+.article {
+  padding: 2px;
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  position: relative;
+  border-bottom: 1px solid #264097;
+  min-height: 45px;
+}
+.bg-dark {
+  background-color: rgb(119, 117, 117);
+  animation: to-light 3s 1;
+  animation-delay: 2s;
+}
+.bg-light {
+  background-color: transparent;
+}
+.article .article-body {
+  flex: 1 1 0%;
+  font-size: medium;
+  position: relative;
+  z-index: 1;
+  margin-left: 5px;
+  width: 75%;
+  // font-weight: bolder;
+}
+.article-media {
+  width: 20%;
+}
+
+.article-details {
+  //   padding-top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+.article-details-cell {
+  flex: 0 0 80px;
+  margin-left: 5px;
+  color: rgb(194, 196, 201);
+  padding: 2px;
+}
+.article-media-cell {
+  flex: 0 0 80px;
+  color: rgb(194, 196, 201);
+  padding: 0px;
+}
+.article-date-time {
+  align-items: center;
+  font-size: 14px;
+}
+.article-source {
+  width: 70%;
+  font-size: 14px;
+}
+.source-title {
+  display: block;
+  font-weight: bolder;
+}
+.article-link {
+  text-decoration: none;
+  color: inherit;
+  font-style: italic;
+  font-size: medium;
+}
+
+.article-date {
+  width: 30%;
+}
+@media (max-width: 480px) {
+  .notification-content {
+    top: 46px !important;
+    right: -15px !important;
+    width: 320px !important;
+  }
+}
+
+@keyframes to-light {
+  from {
+    background: rgb(119, 117, 117);
+  }
+  to {
+    background: transparent;
+  }
+}

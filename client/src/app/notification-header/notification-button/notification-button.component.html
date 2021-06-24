@@ -1,0 +1,10 @@
+<div class="badge-notification">
+  <fa-icon
+    #bellIcon
+    [icon]="faBell"
+    class="fa-stack-4x icon-bell icon-grey"
+  ></fa-icon>
+  <div *ngIf="unreadArtcile > 0" class="badge">
+    <span>{{ unreadArtcile }}+</span>
+  </div>
+</div>

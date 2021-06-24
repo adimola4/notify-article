@@ -1,0 +1,5 @@
+<app-notification-header
+  [articles]="articles"
+  [events]="eventsSubject.asObservable()"
+  [unreadArticles]="getunreadArticles()"
+></app-notification-header>
