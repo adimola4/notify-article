@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "prettier": "prettier --write \"./{src,e2e}/**/*.{ts,js,html,scss}\"",
     "prettier:check": "prettier --list-different \"./{src,e2e}/**/*.{ts,js,html,scss}\"",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "npm run build"
     
   },
   "private": true,
