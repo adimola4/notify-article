@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import * as ActionCable from 'actioncable';
 import { Observable, Subject, Subscription } from 'rxjs';
+import { environment } from 'src/environments/environment';
 // import { AppState } from './core/AppState.service';
 import { CacheService } from './core/cache.service';
 import { DataService } from './core/data.service';
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'Notify-Articles';
   @ViewChild(NotificationHeaderComponent)
   private notificationComponent!: NotificationHeaderComponent;
+  WS_URL = environment.production ?  'ws://notify-articles.herokuapp.com:3001/cable': 'ws://localhost:3001/cable';
 
   private cable: any;
   private subscription: any;
@@ -33,7 +35,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.cable = ActionCable.createConsumer('ws://localhost:3001/cable');
+    this.cable = ActionCable.createConsumer(this.WS_URL);
     // console.log(this.cable.subscriptions);
     this.subscription = this.cable.subscriptions.create('ArticlesChannel', {
       connected: this.connected,
