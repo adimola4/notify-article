@@ -16,7 +16,6 @@ import { CacheService } from '../core/cache.service';
   selector: 'app-notification-header',
   templateUrl: './notification-header.component.html',
   styleUrls: ['./notification-header.component.scss'],
-  
 })
 export class NotificationHeaderComponent implements OnInit, OnDestroy {
   faLink = faLink;

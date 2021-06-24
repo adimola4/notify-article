@@ -7,7 +7,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { IconsModule } from './icons-module';
 
-
 import { AppComponent } from './app.component';
 import { NotificationHeaderComponent } from './notification-header/notification-header.component';
 import { NotificationButtonComponent } from './notification-header/notification-button/notification-button.component';

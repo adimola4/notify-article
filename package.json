@@ -12,12 +12,12 @@
     "webpack-dev-server": "^3.11.2"
   },
   "engines": {
-    "node": "14.17.1",
-    "yarn": "1.22.10"
+      "node": "14.x",
+      "yarn": "1.22.x"
   },
   "scripts": {
     "build": "yarn --cwd client install && yarn --cwd client build",
-    "deploy": "cp -a client/dist/. public/",
+    "deploy": "cp -a client/dist/client/. public/",
     "heroku-postbuild": "yarn build && yarn deploy"
   }
 }

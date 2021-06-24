@@ -18,7 +18,9 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'Notify-Articles';
   @ViewChild(NotificationHeaderComponent)
   private notificationComponent!: NotificationHeaderComponent;
-  WS_URL = environment.production ?  'ws://notify-articles.herokuapp.com:3001/cable': 'ws://localhost:3001/cable';
+  WS_URL = environment.production
+    ? 'wss://notify-articles.herokuapp.com/cable'
+    : 'ws://localhost:3001/cable';
 
   private cable: any;
   private subscription: any;
@@ -36,7 +38,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.cable = ActionCable.createConsumer(this.WS_URL);
-    // console.log(this.cable.subscriptions);
     this.subscription = this.cable.subscriptions.create('ArticlesChannel', {
       connected: this.connected,
       disconnected: this.disconnected,
@@ -49,7 +50,6 @@ export class AppComponent implements OnInit, OnDestroy {
         const readedArticles = this.cacheService.read(
           source.sourceId.toString()
         );
-        console.log(readedArticles);
         for (const article of source.articles) {
           article.unread = readedArticles.includes(article.articleId.toString())
             ? false
@@ -61,10 +61,10 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   connected(): void {
-    console.log('connected!');
+    // console.log('connected!');
   }
   disconnected(): void {
-    console.log('disconnected!');
+    // console.log('disconnected!');
   }
   received(data: any): void {
     if (!data.body.articleId || data.body === {}) {

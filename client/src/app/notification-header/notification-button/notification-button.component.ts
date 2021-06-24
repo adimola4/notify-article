@@ -31,7 +31,6 @@ export class NotificationButtonComponent implements OnInit, OnChanges {
         this.iconView.nativeElement.classList.remove('shake-now');
       }, 3000);
     }
-    // console.log(this.divView.nativeElement);
   }
 
   ngOnInit(): void {}

@@ -29,7 +29,6 @@ export class CacheService {
     const item = localStorage.getItem(sourceId);
     if (item !== null) {
       const record = JSON.parse(item);
-      console.log(record);
       if (!record) {
         return [];
       } else {

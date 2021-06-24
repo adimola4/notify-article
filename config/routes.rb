@@ -11,4 +11,11 @@ Rails.application.routes.draw do
       get "/sources/:id", to: "sources#show"
     end
   end
+
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+      !request.xhr? && request.format.html?
+  end
+
+  root to: "application#fallback_index_html"
+
 end
