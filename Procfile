@@ -1,4 +1,3 @@
-web: bundle exec rails server -p 3001
+web: bundle exec rails server -p $PORT
 release: bin/rake db:migrate
-worker: bundle exec sidekiq  production -c 2
- 
+worker: bundle exec sidekiq -e production -c 2
