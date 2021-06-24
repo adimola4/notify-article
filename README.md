@@ -6,7 +6,7 @@ using Angular, Ruby on Rails, WebSocket, Sidekiq, deploy to Heroku.</p>
 <br/>
 
 # Live Demo
-Here is a working live demo :  
+Here is a working live demo : [https://notify-articles.herokuapp.com/](https://notify-articles.herokuapp.com/)
 
 # Installation
 
